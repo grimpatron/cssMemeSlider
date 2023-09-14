@@ -38,6 +38,7 @@ body {
 .slider__input {
   display: none;
 }
+
 .slider__slide {
   width: 100%;
   /* min-height: 50%; */
