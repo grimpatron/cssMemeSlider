@@ -103,7 +103,6 @@ body {
 #slide5:checked ~ .slider__container {
   transform: translateX( calc(100% / var(--slide-count) * -4) );
 }
-
 .slider__input:checked ~ .slider__text-container {
   transition: transform 0.5s ease-out;
 }
@@ -122,12 +121,10 @@ body {
 #slide5:checked ~ .slider__text-container {
   transform: translateX( calc(100% / var(--slide-count) * -4) );
 }
-
 .slider__pagination:hover .slider__pagination-dot {
   background-color: var(--color-hover);
   transition: background 0.3s ease-out;
 }
-
 #slide1:checked ~ .slider__pagination-wrapper > .pagination-1 > .slider__pagination-dot,
 #slide2:checked ~ .slider__pagination-wrapper > .pagination-2 > .slider__pagination-dot,
 #slide3:checked ~ .slider__pagination-wrapper > .pagination-3 > .slider__pagination-dot,
