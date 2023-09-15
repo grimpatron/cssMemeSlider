@@ -1,6 +1,6 @@
 :root {
   --slide-with: 55vw;
-  --slide-height: 28vw;
+  --slide-height: 29vw;
   --slide-count: 5;
   --padding-with: calc(var(--slide-with) / 100 * 26);
   --color: #668ad2;
@@ -16,7 +16,7 @@ body {
   background-color: var(--background-color);
   font-family: sans-serif;
   font-size: var(--font-size);
-  color: #e5fffb;
+  color: #eee;
 }
 .container {
   height: 100vh;
@@ -24,7 +24,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 .slider {
   display: grid;
@@ -41,10 +40,8 @@ body {
 .slider__input {
   display: none;
 }
-
 .slider__slide {
   width: 100%;
-  /* min-height: 50%; */
 }
 .slider__slide-img {
   width: 100%;
@@ -52,7 +49,6 @@ body {
   object-fit: cover;
   border-radius: 1rem;
 }
-
 .slider__pagination-wrapper {
   width: 100%;
   grid-row: 2 / 3;
@@ -75,23 +71,20 @@ body {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #668ad2;
-  border: 3px solid transparent;
+  background-color: var(--color);
+  border: 0.2rem solid transparent;
 }
-
 .slider__text-container {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   display: flex;
   width: calc( var(--slide-with) * var(--slide-count));
 }
-
 .slider__text {
   width: var(--slide-with);
   padding: 0.6rem var(--padding-with) 0.6rem 0.6rem;
   height: 6rem;
 }
-
 .slider__input:checked ~ .slider__container {
   transition: transform 0.5s ease-out;
 }
@@ -155,8 +148,8 @@ body {
 
 @media (max-width: 1600px) {
   :root {
-    --slide-with: 65vw;
-    --slide-height: 34vw;
+    --slide-with: 60vw;
+    --slide-height: 31.5vw;
     --padding-with: calc(var(--slide-with) / 100 * 28);
   }
 }
@@ -165,7 +158,7 @@ body {
   :root {
     --slide-with: 75vw;
     --slide-height: 39.5vw;
-    --font-size: 1.2rem;
+    --font-size: 1.1rem;
     --padding-with: calc(var(--slide-with) / 100 * 32);
   }
 }
@@ -186,12 +179,21 @@ body {
     padding-bottom: 0;
   }
   .slider__text {
-    padding: 0.6rem;
+    padding: 0 0.6rem 0.6rem 0.6rem;
   }
 }
 
 @media (max-width: 640px) {
   :root {
+    --slide-with: 90vw;
+    --slide-height: 47.37vw;
     --font-size: 1rem;
+  }
+  .slider__pagination {
+    padding: 0.5rem;
+  }
+  .slider__pagination-dot {
+    width: 1rem;
+    height: 1rem;
   }
 }
